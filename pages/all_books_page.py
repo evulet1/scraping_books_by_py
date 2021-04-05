@@ -26,4 +26,5 @@ class AllBooksPage:
         pattern = 'Page [0-9]+ of ([0-9]+)'
         matcher = re.search(pattern, content)
         pages = int(matcher.group(1))
+        logger.debug(f'Extracted number of pages as integer: `{pages}`')
         return pages
